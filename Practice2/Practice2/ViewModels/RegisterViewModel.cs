@@ -34,6 +34,11 @@ namespace Practice2.ViewModels
             {
                 await _alertService.Alert("Error", "Please fill all the fields", "OK");
             }
+            else if (RegisterModel.Password!=RegisterModel.PasswordConfirm)
+            {
+                await _alertService.Alert("Error", "Passwords do not match", "OK");
+
+            }
             else
             {
                 await _alertService.Alert("Register successful", "Your account has been created successfully", "OK");
