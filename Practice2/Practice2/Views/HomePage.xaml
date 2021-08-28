@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Practice2.Views.HomePage"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:local="clr-namespace:Practice2.Views"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+  <!--Pages can be added as references or inline-->
+    <local:DiscoveryPage Title="Discovery" IconImageSource="outline_place_black_48"/>
+    <ContentPage Title="Home" IconImageSource="outline_home_black_48"/>
+    <ContentPage Title="Bookmark" IconImageSource="outline_bookmark_border_black_48"/>
+    <ContentPage Title="Top Foods" IconImageSource="outline_emoji_events_black_48"/>
+    <ContentPage Title="Profile" IconImageSource="outline_person_black_48"/>
+</TabbedPage>

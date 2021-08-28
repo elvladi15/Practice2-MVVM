@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:Practice2.Views"
+             x:Class="Practice2.Views.LoginPage"
+             BackgroundColor="#fff">
+    <StackLayout VerticalOptions="Center">
+        <Image Source="dog" WidthRequest="120" Margin="0,0,0,70"/>
+        
+        <Entry Placeholder="Username" 
+               Text="{Binding LoginModel.Username}"/>
+        
+        <Entry Placeholder="Password" 
+               IsPassword="True" 
+               Text="{Binding LoginModel.Password}"/>
+        
+        <Button Text="Login" 
+                BackgroundColor="#003DCB" 
+                TextColor="#FFF" 
+                WidthRequest="50"
+                Command="{Binding LoginButtonCommand}"/>
+        
+        <Label Text="Don't have an account? Register" 
+               Margin="0,40,0,0" 
+               HorizontalOptions="Center" 
+               TextColor="blue"
+               TextDecorations="Underline"
+               FontSize="Medium"
+               >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding GoToRegisterPageCommand}"/>
+            </Label.GestureRecognizers>
+        </Label>
+        
+    </StackLayout>
+</ContentPage>

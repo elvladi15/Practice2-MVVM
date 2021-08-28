@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practice2.Views.RegisterPage"
+             BackgroundColor="#fff">
+    <StackLayout VerticalOptions="Center">
+        <Image Source="dog" WidthRequest="120" Margin="0,0,0,10"/>
+
+        <Entry Placeholder="Username"  
+               Text="{Binding RegisterModel.Username}"/>
+        
+        <Entry Placeholder="Email" 
+               Text="{Binding RegisterModel.Email}"/>
+        
+        <Entry Placeholder="Password" 
+               IsPassword="True" 
+               Text="{Binding RegisterModel.Password}"/>
+        
+        <Entry Placeholder="Confirm password" 
+               IsPassword="True" 
+               Text="{Binding RegisterModel.PasswordConfirm}"/>
+        
+        <Button Text="Register" 
+                BackgroundColor="#003DCB" 
+                TextColor="#FFF" 
+                WidthRequest="50"
+                Command="{Binding RegisterButtonCommand}"/>
+        
+        <Label Text="Get back to login page" 
+               Margin="0,50,0,0" 
+               HorizontalOptions="Center" 
+               TextColor="blue"
+               TextDecorations="Underline"
+               FontSize="Medium"
+               >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding GoToLoginPageCommand}"/>
+            </Label.GestureRecognizers>
+        </Label>
+
+    </StackLayout>
+</ContentPage>
